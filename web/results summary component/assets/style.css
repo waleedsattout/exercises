@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "wght";
+    src: url("./fonts/HankenGrotesk-VariableFont_wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: wght;
+    margin: 0;
+}
+
+html {
+    height: 95vh;
+}
+
+.container {
+    margin: 15% auto;
+    border-radius: 18px;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 5px 10px 1px #e8e9fc, 10px 6px 20px 1px #e8e9fc, 0 5px 10px 1px #e8e9fc;
+    max-width: 411px;
+}
+
+.container>* {
+    flex: 1 0 0px;
+}
+
+.container .heading {
+    margin-top: 1.3rem;
+}
+
+.container .result {
+    text-align: center;
+    color: #d4c8ff;
+    background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.container .cont {
+    margin: 1.4rem;
+}
+
+.container .box {
+    background-color: hsl(var(--color-deg) 100% 98%);
+    border-radius: 6px;
+    margin: 10px 0;
+    display: flex;
+}
+
+.box img {
+    width: 11px;
+    margin: 0 6px;
+}
+
+.box span {
+    width: 40%;
+}
+
+.box .mark {
+    display: inline-flex;
+    font-size: 11px;
+    width: 45%;
+    margin: 0;
+    justify-content: end;
+    gap: 5px;
+}
+
+.box .mark p {
+    color: #293243;
+    font-weight: 600;
+}
+
+.box .mark p+p {
+    color: #aea5a8;
+}
+
+.container .summary .heading {
+    color: #293243;
+    font-weight: 600;
+}
+
+.container .summary .btn {
+    background-color: hsl(224, 30%, 27%);
+    color: #f7ffff;
+    border-radius: 18px;
+    text-align: center;
+    margin-top: 12%;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.container .summary .btn:hover {
+    background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.container .result .circle {
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 8%;
+    background: linear-gradient( 180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1;
+    justify-content: center;
+}
+
+.container .result .circle .main {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fffefe;
+}
+
+.container .result .circle .secondary {
+    color: #887bff;
+    font-size: 11px;
+}
+
+.container .result .title {
+    margin-top: 7%;
+    font-size: 1.2rem;
+    color: #fffefe;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: cursive;
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 997px) {
+    .container .result .secondary {
+        margin: 10px 14%;
+        font-size: 10px;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .container .box {
+        padding: 8px 6px;
+    }
+    .container>* {
+        width: 0;
+        border-radius: 18px;
+    }
+    .container .result .circle {
+        width: 54%;
+    }
+    .summary * {
+        font-size: 11px;
+    }
+    .container .heading {
+        font-size: 13px;
+    }
+    .container .summary .btn {
+        padding: 9px;
+    }
+}
+
+@media (max-width: 996px) {
+    .container .result .secondary {
+        margin: 10px 8% 20px;
+        font-size: 14px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+    .container .box {
+        padding: 14px 6px;
+    }
+    .container>* {
+        width: auto;
+        height: auto;
+        border-radius: 0 0 18px 18px;
+    }
+    .result {
+        height: 30%;
+    }
+    .summary {
+        height: 70%;
+    }
+    .container .result .circle {
+        width: 35%;
+    }
+    .summary * {
+        font-size: 16px;
+    }
+    .container .heading {
+        font-size: 18px;
+    }
+    .container .summary .btn {
+        padding: 14px;
+    }
+}
