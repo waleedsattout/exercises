@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+
+.hero {
+  display: flex;
+  height: 500px;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+}
+
+.ls {
+  display: flex;
+}
+
+.ls > * {
+  padding: 8px 12px;
+  color: hsl(0, 0%, 41%);
+  align-self: center;
+}
+
+.primary {
+  color: hsl(0, 0%, 8%);
+}
+
+.slide-enter-active,
+[drop] {
+  transition: all 0.5s ease-in;
+}
+
+.bolden {
+  position: relative;
+  -webkit-text-stroke-width: 0;
+  font-weight: normal;
+  text-shadow: initial;
+}
+.bolden:hover {
+  text-shadow: 0.0075px 0 0 currentColor, 0.0075px 0 0 currentColor;
+  -webkit-text-stroke-width: 0.01px;
+  cursor: pointer;
+}
+
+.ctm-font {
+  font-size: 16px;
+  font-family: Epilogue, cursive, Arial, Helvetica, sans-serif;
+  color: hsl(0, 0%, 41%);
+  white-space: break-spaces;
+}
+.btn {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+}
+.btn:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+  border: 1px solid hsl(0, 0%, 8%);
+  white-space: nowrap;
+}
+
+.register {
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 14px;
+}
+.register:hover,
+.register ~ div:hover {
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+}
+
+.drop-menu {
+  min-width: 7rem;
+  top: 35px;
+  right: 0;
+  position: absolute;
+  padding: 16px 20px;
+  background: hsl(0, 0%, 99%);
+  border-radius: 12px;
+  box-shadow: 0 0 1rem hsl(0, 0%, 80%);
+}
+.drop-menu > div {
+  padding: 6px 0;
+  display: flex;
+}
+.drop-menu [item] div {
+  margin-left: 0.75rem;
+  white-space: nowrap;
+}
+
+.dimming {
+  position: absolute;
+  inset: 0;
+  background: hsl(0deg 0% 25% / 75%);
+}
+
+.drower {
+  position: absolute;
+  inset: 0;
+  left: 35%;
+  padding: 2rem;
+  font-size: 18px;
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: #fff;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .head {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .ctm-font {
+    width: 100%;
+    text-align: center;
+  }
+
+  img.icon {
+    height: fit-content;
+    width: 25%;
+    margin: auto;
+  }
+
+  .drop-menu {
+    position: static;
+    background: inherit;
+    box-shadow: none;
+  }
+
+  .bolden {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .hero {
+    height: 500px;
+    margin: 0 3rem;
+    flex-direction: row;
+  }
+
+  .head {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .ctm-font {
+    width: 80%;
+  }
+
+  img.icon {
+    height: fit-content;
+    width: fit-content;
+    margin-right: auto;
+  }
+
+  body {
+    background-color: hsl(0, 0%, 98%);
+  }
+}
