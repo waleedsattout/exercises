@@ -1,6 +1,6 @@
 # Frontend Mentor - Results summary component solution
 
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -13,20 +13,17 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
 ## Overview
-
 
 ### Screenshot
 
-*for small screens:*
+_for small screens:_
 
-![](./assets/images/mobile.png)
+![Mobile version](./assets/images/mobile.png)
 
-*and for large screens:*
+_and for large screens:_
 
-![](./assets/images/laptop.png)
-
+![Desktop version](./assets/images/laptop.png)
 
 ### Links
 
@@ -38,7 +35,6 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 - Simple HTML5 markup
 - CSS custom properties
-
 
 ### What I learned
 
@@ -56,13 +52,14 @@ Not as much, but an interesting hack to make two children the same width of a di
 - Frontend Mentor - [@waleedsattout](https://www.frontendmentor.io/profile/waleedsattout)
 - Twitter - [@waleedsattout](https://mobile.twitter.com/waleedsattout)
 
-
 ## Acknowledgments
 
 You should obviously try it on your own, but you can open the pictures and inspect them, add an element with the followin for example:
-```css 
+
+```css
 position: absolute;
 bottom: 30%;
-left:25%;
+left: 25%;
 ```
-then you can try  `copy-paste` and you're good to go.
+
+then you can try `copy-paste` and you're good to go.
