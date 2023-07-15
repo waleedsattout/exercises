@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Chess with Flask</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="../static/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <p id="score"></p>
+    <p id="timer"></p>
+    {% if board.is_game_over() %}
+    <p>Game over. Result: {{board.result()}}</p>
+    {% endif %}
+
+    <div class="main">
+      <div class="side">
+        <button class="chip" onclick="hint()">Hint</button>
+        <button class="chip" onclick="undo()">Undo</button>
+        <button class="chip" onclick="reset()">Reset</button>
+        <hr />
+        <form
+          id="settings"
+          action="javascript:void(0);"
+          class="settings"
+          onsubmit="settings(this)"
+        >
+          <div>
+            <label> Algorithm </label>
+            <input
+              value="{{game.algorithm}}"
+              required
+              name="algorithm"
+              list="algorithm"
+            />
+            <datalist id="algorithm">
+              <option value="alpha_betaMinMaxL"></option>
+              <option value="alpha_beta_MinMaxbest"></option>
+            </datalist>
+          </div>
+          <div>
+            <label>Level </label>
+            <input required value="{{game.level}}" name="level" list="level" />
+            <datalist id="level">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+            </datalist>
+          </div>
+          <div>
+            <label> Number of top moves </label>
+            <input required value="{{game.k}}" name="k" list="k" />
+            <datalist id="k">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+            </datalist>
+          </div>
+
+          <button type="submit">submit</button>
+        </form>
+      </div>
+      <div class="board" id="board"></div>
+    </div>
+    <pre id="hidden" style="display: none">
+      {{board|string}}
+    </pre>
+    <script src="../static/script.js"></script>
+  </body>
+</html>
