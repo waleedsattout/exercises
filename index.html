@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            font-size: 16px;
+            font-family: sans-serif;
+            background-color: #FFFBFE;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .heading h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+            color: #222;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            grid-template-rows: 27px 0;
+            grid-gap: 20px;
+            align-items: center;
+        }
+
+        .heading h1:after,
+        .heading h1:before {
+            content: " ";
+            display: block;
+            border-bottom: 1px solid #c50000;
+            border-top: 1px solid #c50000;
+            height: 5px;
+            background-color: #f8f8f8;
+        }
+
+
+        .container {
+            width: calc(100% - 4rem);
+            margin: 1rem;
+            padding: 0 1rem;
+        }
+
+        .container h2 {
+            text-decoration: double;
+        }
+
+        .card-image {
+            display: flex;
+            flex-direction: column;
+            height: 21rem;
+            background: #fff center center no-repeat;
+            background-size: cover;
+            text-decoration: none;
+        }
+
+        .card-image>img {
+            display: block;
+            width: 100%;
+        }
+
+        .card-list {
+            display: block;
+            margin: 1rem auto;
+            padding: 0;
+            font-size: 0;
+            text-align: center;
+            list-style: none;
+        }
+
+        .card {
+            display: inline-block;
+            width: 90%;
+            max-width: 20rem;
+            margin: 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-0.5rem) scale(1.0125);
+            box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+        }
+
+        .card-description {
+            display: block;
+            color: #515151;
+            text-decoration: none;
+            padding: 1rem .5rem;
+            margin: auto;
+        }
+
+        .card,
+        .card-image {
+            border-radius: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--edited from https://codepen.io/derekmorash/pen/NjBvdX-->
+    <div class="container">
+        <div class="heading">
+            <h1>Web</h1>
+        </div>
+        <ul class="card-list">
+            <li class="card">
+                <a class="card-image"
+                    href="https://waleedsattout.github.io/exercises/web/Intro%20section%20with%20dropdown%20navigation%20solution/dist/">
+                    <img src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/dyxm5d5ghuj2zwgwkfda.jpg"
+                        alt="" />
+                    <h3 class="card-description">
+                        Results summary component
+                    </h3>
+                </a>
+            </li>
+
+            <li class="card">
+                <a class="card-image"
+                    href="https://waleedsattout.github.io/exercises/web/results%20summary%20component/">
+                    <img src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/sxvqanh5z7twcdzg9lfc.jpg"
+                        alt="" />
+                    <h3 class="card-description">
+                        Intro section with dropdown navigation solution
+                    </h3>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
